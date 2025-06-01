@@ -59,7 +59,7 @@ services:
     depends_on:
       - kafka
   elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.8.0
+    image: elasticsearch:7.17.28
     environment:
       - cluster.name=docker-cluster
       - bootstrap.memory_lock=true
@@ -76,7 +76,7 @@ services:
         soft: 65536
         hard: 65536
   kibana:
-    image: docker.elastic.co/kibana/kibana:7.8.0
+    image: kibana:7.17.28
     ports:
       - "5601:5601"
     depends_on:
