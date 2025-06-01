@@ -127,7 +127,7 @@ public class ClickEventCount {
 										.setTopic(outputTopic)
 										.setValueSerializationSchema(new ClickEventStatisticsSerializationSchema())
 										.build())
-						.setDeliverGuarantee(DeliveryGuarantee.AT_LEAST_ONCE)
+						.setDeliveryGuarantee(DeliveryGuarantee.AT_LEAST_ONCE)
 						.build())
 				.name("ClickEventStatistics Sink");
 
